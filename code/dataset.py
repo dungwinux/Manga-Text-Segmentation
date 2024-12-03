@@ -188,7 +188,7 @@ class SegLabelListCustom(CutInHalf, SegmentationLabelList):
 
             #remove small components
             labeles = label(mask[0].cpu(), connectivity=2)
-            remove_small_objects(labeles, self.areaThreshold + 1, in_place=True)
+            remove_small_objects(labeles, self.areaThreshold + 1, out=labeles)
             mask[0][labeles == 0] = 0    
 
             #make sure it all worked

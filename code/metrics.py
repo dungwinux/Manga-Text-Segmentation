@@ -1,7 +1,8 @@
 from collections import defaultdict
 from fastai.vision import *
 from skimage.measure import label, regionprops 
-from skimage.morphology import watershed, square
+from skimage.morphology import square
+from skimage.segmentation import watershed
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import ndimage as nd
